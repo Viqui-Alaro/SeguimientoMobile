@@ -6,7 +6,6 @@ import android.arch.persistence.room.Entity;
 @Entity(tableName = "usuarioEntity")
 public class Usuario {
 
-
     @ColumnInfo(name = "nombre")
     private String nombre;
     @ColumnInfo(name = "login")

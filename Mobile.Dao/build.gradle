@@ -3,11 +3,15 @@ apply plugin: 'java-library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path:':Mobile.Entities')
+    implementation project(path: ':Mobile.Domain')
     implementation mobileDaoDependencies.javaxInject
+
+    implementation mobileDaoDependencies.roomRuntime
+    implementation mobileDaoDependencies.roomRxjava2
+    implementation mobileDaoDependencies.annotationProcessor
 
     testImplementation mobileDaoTestDependencies.junit
     testImplementation mobileDaoTestDependencies.mockito
-
 
 
 }

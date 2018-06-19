@@ -49,6 +49,7 @@ ext {
             kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
     ]
 
+
     mobileDomainTestDependencies = [
             junit  : "junit:junit:${jUnitVersion}",
             mockito: "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
@@ -93,8 +94,13 @@ ext {
             androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
             retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             retrofitConverter : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
-            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            roomRuntime:"android.arch.persistence.room:runtime:$roomVersion",
+            roomRxjava2:"android.arch.persistence.room:rxjava2:$roomVersion",
+            annotationProcessor:"android.arch.persistence.room:compiler:$roomVersion"
+
     ]
+
 
     mobileDaoTestDependencies = [
             junit      : "junit:junit:${jUnitVersion}",
