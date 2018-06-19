@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path:':Mobile.Service')
+
+    implementation mobileDomainDependencies.javaxInject
+
+    testImplementation mobileDomainTestDependencies.junit
+
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+

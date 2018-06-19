@@ -1,0 +1,141 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+
+    //Android
+    androidBuildToolsVersion = "26.0.0"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 26
+    androidCompileSdkVersion = 26
+
+    //Libraries
+    kotlinVersion = '1.1.3-2'
+    rxKotlinVersion = '2.1.0'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    gsonVersion = '2.8.1'
+    okHttpVersion = '3.8.1'
+    androidAnnotationsVersion = '21.0.3'
+    retrofitVersion = '2.3.0'
+    roomVersion = '1.0.0'
+    supportLibraryVersion = '26.0.1'
+    timberVersion = '4.5.1'
+    glideVersion = '4.0.0'
+    daggerVersion = '2.11'
+    glassfishAnnotationVersion = '10.0-b28'
+
+    //Testing
+    robolectricVersion = '3.4.2'
+    jUnitVersion = '4.12'
+    assertJVersion = '3.8.0'
+    mockitoVersion = '1.9.5'
+    dexmakerVersion = '1.0'
+    espressoVersion = '3.0.0'
+    testingSupportLibVersion = '0.1'
+    mockitoKotlinVersion = '1.5.0'
+    mockitoAndroidVersion = '2.8.47'
+    androidSupportRunnerVersion = '1.0.0'
+    androidSupportRulesVersion = '1.0.0'
+    dexmakerMockitoversion = '2.2.0'
+    runnerVersion = '0.5'
+
+
+
+    mobileDomainDependencies = [
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxKotlin       : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
+    ]
+
+    mobileDomainTestDependencies = [
+            junit  : "junit:junit:${jUnitVersion}",
+            mockito: "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj: "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    mobileViewDependencies = [
+            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger            : "com.google.dagger:dagger:${daggerVersion}",
+            okHttp            : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLogger      : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            gson              : "com.google.code.gson:gson:${gsonVersion}",
+            rxKotlin          : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            rxAndroid         : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation   : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    ]
+    mobileViewTestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}"
+    ]
+
+    mobileDaoDependencies = [
+            daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger            : "com.google.dagger:dagger:${daggerVersion}",
+            okHttp            : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLogger      : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            gson              : "com.google.code.gson:gson:${gsonVersion}",
+            rxKotlin          : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            rxAndroid         : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation   : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    ]
+
+    mobileDaoTestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}"
+    ]
+
+
+    mobileEntitiesDependencias = [
+            roomRuntime:"android.arch.persistence.room:runtime:$roomVersion",
+            roomRxjava2:"android.arch.persistence.room:rxjava2:$roomVersion"
+    ]
+
+}
+
+
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
